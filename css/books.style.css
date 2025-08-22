@@ -1,0 +1,221 @@
+
+        .hero-section {
+            background: linear-gradient(135deg, rgba(107, 70, 193, 0.8) 0%, rgba(76, 29, 149, 0.8) 100%);
+        }
+
+        .book-card {
+            background: white;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            position: relative;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #6b46c1;
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .nav-link.active {
+            color: #6b46c1;
+        }
+
+        .nav-link.active::after {
+            width: 100%;
+            background-color: #6b46c1;
+        }
+
+        .category-btn {
+            transition: all 0.3s ease;
+        }
+
+        .category-btn:hover {
+            transform: scale(1.03);
+        }
+
+        .book-theme {
+            background: linear-gradient(135deg, #6b46c1 0%, #4c1d95 100%);
+        }
+
+        .cart-item-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: #6b46c1;
+            color: white;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background-color: white;
+            border-radius: 0.5rem;
+            width: 90%;
+            max-width: 500px;
+            max-height: 90vh;
+            overflow-y: auto;
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .cart-item {
+            transition: all 0.3s ease;
+        }
+
+        .cart-item:hover {
+            background-color: #f9fafb;
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 80%;
+            max-width: 300px;
+            height: 100vh;
+            background-color: #4c1d95;
+            z-index: 100;
+            transition: right 0.3s ease;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 99;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .search-container {
+            position: relative;
+            transition: all 0.3s ease;
+            width: 40px;
+            overflow: hidden;
+        }
+
+        .search-container.expanded {
+            width: 250px;
+        }
+
+        .search-input {
+            position: absolute;
+            right: 0;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .search-container.expanded .search-input {
+            opacity: 1;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .filter-btn {
+            transition: all 0.2s ease;
+        }
+
+        .filter-btn.active {
+            background-color: #6b46c1;
+            color: white;
+        }
+
+        .book-cover {
+            height: 280px;
+            object-fit: contain;
+            background-color: #f3f4f6;
+        }
+
+        .author-name {
+            color: #6b46c1;
+            font-weight: 500;
+        }
+
+        .rating-stars {
+            color: #f59e0b;
+        }
+
+        .discount-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ef4444;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .book-details {
+            min-height: 120px;
+        }
